@@ -6,7 +6,9 @@ It is built using HTML, CSS, JS, EJS, Node.js and MongoDB.
 ![image](https://user-images.githubusercontent.com/46302098/194726797-95af8d81-d9d8-432c-ac81-38d29f903f82.png)
 
 Users can submit tickets without login. 
+
 Admins can log into the Admin panel, which displays all the tickets.
+
 Admins can view details of the ticket, edit, or delete the ticket.
 
 EV Charger Issue Form was the final project in my JavaScript course at Conestoga College.
