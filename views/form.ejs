@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <%- include('partials/meta.ejs') %>
+        <title>EV Charger</title>
+</head>
+
+
+<body>
+    <%- include('partials/nav.ejs') %>
+        <main>
+            <form name="myform" method="Post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td><label>Station ID</label></td>
+                        <td><input id="station" placeholder="Station ID" type="text" name="station"><br /></td>
+                    </tr>
+
+                    <tr>
+                        <td><label class="connector">Connector type</label></td>
+                        <td><select name="connector" id="connector">
+                                <option value="">----- Select -----</option>
+                                <option value="CCS">CCS</option>
+                                <option value="CHAdeMO">CHAdeMO</option>
+                                <option value="J1772">J1772</option>
+                                <option value="Tesla">Tesla</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label>Address</label></td>
+                        <td><input id="address" placeholder="Address" type="text" name="address"><br /></td>
+                    </tr>
+                    <tr>
+                        <td> <label>City</label></td>
+                        <td><input id="city" placeholder="City" type="text" name="city"><br /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Province</label></td>
+                        <td> <select name="province" id="province">
+                                <option value="Alberta">Alberta</option>
+                                <option value="BritishColumbia">British Columbia</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="NewBrunswick">New Brunswick</option>
+                                <option value="Newfoundland">Newfoundland and Labrador</option>
+                                <option value="NorthwestTerritories">Northwest Territories</option>
+                                <option value="NovaScotia">Nova Scotia</option>
+                                <option value="Nunavut">Nunavut</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="PEI">Prince Edward Island</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Yukon">Yukon</option>
+                            </select><br /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Postal Code</label></td>
+                        <td> <input id="postalcode" placeholder="H0H0H0" type="postalcode" name="postalcode"><br /></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Contact Name</label></td>
+                        <td><input id="name" placeholder="First Last" type="text" name="name"><br /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Contact Phone</label></td>
+                        <td> <input id="phone" placeholder="1231231234" type="phone" name="phone"><br /></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Contact Email</label></td>
+                        <td> <input id="email" placeholder="test@test.com" type="text" name="email"><br /></td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="describeissue">Describe Issue Here</label></td>
+                        <td><input type="text" id="describeissue" name="describeissue"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="uploadphoto">Upload photo</label></td>
+                        <td><input type="file" id="uploadphoto" name="uploadphoto"></td>
+                    </tr>
+
+
+                </table>
+                <br>
+
+
+
+                <input type="submit" value="Submit Issue">
+                <p id="errors">
+                    <!-- if there are errors render each one -->
+                    <% if(typeof(errors) !='undefined' ){ for(var error of errors){ %>
+                        <%= error.msg %> <br>
+                            <% } } %>
+
+                </p>
+            </form>
+        </main>
+        <%- include('partials/footer.ejs') %>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="js/tinymce/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    selector: '#describeissue'
+                });
+            </script>
+
+</body>
+
+</html>

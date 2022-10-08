@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <%- include('partials/meta.ejs') %>
+            <title>Edit Issue</title>
+    </head>
+</head>
+
+<body>
+    <%- include('partials/nav.ejs') %>
+
+        <main>
+
+            <table>
+                <tr>
+                    <td><label>Station ID</label></td>
+                    <td>
+                        <%= station %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label class="connector">Connector type</label></td>
+                    <td>
+                        <%=connector%>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Address</label></td>
+                    <td>
+                        <%= address %>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label>City</label></td>
+                    <td>
+                        <%= city %>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Province</label></td>
+                    <td>
+                        <%=province%>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Postal Code</label></td>
+                    <td>
+                        <%= postalcode %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Contact Name</label></td>
+                    <td>
+                        <%= name %>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Contact Phone</label></td>
+                    <td>
+                        <%= phone %>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label>Contact Email</label></td>
+                    <td>
+                        <%= email %>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><label for="describeissue">Describe Issue Here</label></td>
+                    <td>
+                        <%- describeissue %>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="uploadphoto">Upload photo</label></td>
+
+                    <td><img src="data:image/jpeg;base64,<%= Buffer.from(uploadphoto, " binary").toString("base64") %>"
+                        alt="" style="max-width:400px"></td>
+
+                    <!-- displaying the image, using a data URL (image embedded in a page)
+                            source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs -->
+                </tr>
+
+
+            </table>
+
+
+        </main>
+        <%- include('partials/footer.ejs') %>
+
+
+
+</body>
+
+</html>

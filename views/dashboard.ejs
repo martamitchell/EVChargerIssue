@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/meta.ejs') %>
+        <title>Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Submitted Issues</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Logout</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <table>
+            <tr>
+                <th>Issue ID</th>
+                <th>Station ID</th>
+                <th>Connector type</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Province</th>
+                <th>Postal Code</th>
+                <th>Contact Name</th>
+                <th>Contact Phone</th>
+                <th>Contact Email</th>
+                <th>Issue</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+
+            <!-- loop: table that renders each issue on a separate row -->
+            <% for(var issue of issues){ %>
+                <tr>
+                    <td><a href="/print/<%= issue._id %>">
+                            <%= issue._id %>
+                        </a></td>
+                    <td>
+                        <%= issue.station %>
+                    </td>
+                    <td>
+                        <%= issue.connector %>
+                    </td>
+                    <td>
+                        <%= issue.address %>
+                    </td>
+                    <td>
+                        <%= issue.city %>
+                    </td>
+                    <td>
+                        <%= issue.province %>
+                    </td>
+                    <td>
+                        <%= issue.postalcode %>
+                    </td>
+                    <td>
+                        <%= issue.name %>
+                    </td>
+                    <td>
+                        <%= issue.phone %>
+                    </td>
+                    <td>
+                        <%= issue.email %>
+                    </td>
+
+                    <td style="max-height: 20px;max-width: 50px">
+                        <%- issue.describeissue %>
+                    </td>
+                    <td><a href="/edit/<%= issue._id %>">EDIT</a></td>
+                    <td><a href="/delete/<%= issue._id %>">DELETE</a></td>
+
+                </tr>
+                <% } %>
+
+
+        </table>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>
