@@ -14,6 +14,6 @@ Admins can view details of the ticket.
 
 ![image](https://user-images.githubusercontent.com/46302098/194727070-bdb6977b-eddb-40dc-bb62-af2a7ce7a88b.png)
 
-Admins can also edit, or delete the ticket.
+Admins can also edit or delete the ticket.
 
 EV Charger Issue Form was the final project in my JavaScript course at Conestoga College.
