@@ -1,5 +1,8 @@
 Some of my favorite things: :camping: :mountain_snow: :beach_umbrella: :canoe: :bullettrain_front: :oncoming_automobile:
 
+To run this program on your computer, please follow installation instructions here: (https://github.com/martamitchell/EVChargerIssue/wiki/How-to-run-this-code)
+
+
 EV Charger Issue Form is a web application for submission of tickets for customers using the network of EV chargers.
 
 It is built using HTML, CSS, JS, EJS, Node.js and MongoDB.
