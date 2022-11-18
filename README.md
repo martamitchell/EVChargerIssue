@@ -2,6 +2,8 @@ Some of my favorite things: :camping: :mountain_snow: :beach_umbrella: :canoe: :
 
 Some of my favorite foods: :yum: :tomato: :baguette_bread: :ramen: :wine_glass:
 
+My favourite colour: :green_heart:
+
 EV Charger Issue Form is a web application for submission of tickets for customers using the network of EV chargers.
 
 It is built using HTML, CSS, JS, EJS, Node.js and MongoDB.
